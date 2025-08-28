@@ -7,7 +7,6 @@ from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register('movies', MovieViewSet)
-router.register('cinema_hall', CinemaHallViewSet)
 
 urlpatterns = [
     path("genres/", GenreList.as_view(), name="genre-list"),

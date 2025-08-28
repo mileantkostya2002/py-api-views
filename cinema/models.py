@@ -47,8 +47,8 @@ class Movie(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField(blank=True, null=True)
     duration = models.IntegerField()  # duration in minutes
-    actors = models.ManyToManyField(Actor, related_name='movies', blank=True)
-    genres = models.ManyToManyField(Genre, related_name='movies', blank=True)
+    actors = models.ManyToManyField(Actor, related_name='actors', blank=True)
+    genres = models.ManyToManyField(Genre, related_name='genres', blank=True)
 
     class Meta:
         ordering = ['title']
